@@ -6,6 +6,21 @@ import (
 	"strings"
 )
 
+func FindShort2(s string) int {
+	words := strings.Fields(s)
+
+	result := -1
+
+	for _, word := range words {
+		l := len(word)
+		if result < 0 || l < result {
+			result = l
+		}
+	}
+
+	return result
+}
+
 func FindShort(s string) int {
 
 	words := strings.Split(s, " ")
@@ -27,5 +42,5 @@ func FindShort(s string) int {
 	return min
 }
 func main() {
-	fmt.Println(FindShort("hallo du und alles suzammen"))
+	fmt.Println(FindShort("hallo  du und alles suzammen"))
 }
