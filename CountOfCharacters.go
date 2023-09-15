@@ -11,7 +11,8 @@ type Tuple struct {
 }
 
 func OrderedCount(text string) []Tuple {
-	counts := make([]Tuple, 0, len(text))
+	counts := make([]Tuple, 0, len([]rune(text)))
+
 	counted := ""
 	for _, r := range text {
 		if strings.Count(counted, string(r)) == 0 {
@@ -19,10 +20,9 @@ func OrderedCount(text string) []Tuple {
 			counted += string(r)
 		}
 	}
-
 	return counts
 }
 
 func main() {
-	fmt.Println(OrderedCount("abracadabra"))
+	fmt.Println(OrderedCount("abracadabra 世 界"))
 }
