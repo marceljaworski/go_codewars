@@ -24,3 +24,17 @@ func Capitalize(st string) []string {
 func main() {
 	fmt.Println(Capitalize("abcdef"))
 }
+
+// package kata
+// import "unicode"
+// func Capitalize(s string) []string {
+//   a, b := []rune(s),[]rune(s)
+//   for i := range a {
+//     if i%2 == 0 {
+//       a[i] = unicode.ToUpper(a[i])
+//     }else{
+//       b[i] = unicode.ToUpper(b[i])
+//     }
+//   }
+//   return []string{string(a), string(b)}
+// }
