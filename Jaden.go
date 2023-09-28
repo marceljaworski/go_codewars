@@ -15,6 +15,8 @@ func ToJadenCase(str string) string {
 	}
 
 	return strings.Join(words, " ")
+
+	// return strings.Title(str)
 }
 func main() {
 	fmt.Println(ToJadenCase("should work for sample test cases"))
