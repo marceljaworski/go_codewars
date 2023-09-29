@@ -6,10 +6,10 @@ import (
 )
 
 func SolveAbc(str string) int {
-	var abc string = "aabcdefghijklmnopqrstuvwxyz"
-
+	var abc string = "abcdefghijklmnopqrstuvwxyz"
 	countConsonants := 0
 	subStrings := make([]int, 0, len(str))
+
 	for i := 0; i < len(str); i++ {
 
 		if strings.Contains("aeiou", string(str[i])) {
@@ -17,7 +17,7 @@ func SolveAbc(str string) int {
 			countConsonants = 0
 			continue
 		} else {
-			countConsonants = countConsonants + strings.Index(abc, string(str[i]))
+			countConsonants += strings.Index(abc, string(str[i])) + 1
 		}
 	}
 	subStrings = append(subStrings, countConsonants)
@@ -27,6 +27,7 @@ func SolveAbc(str string) int {
 			max = number
 		}
 	}
+	fmt.Println(subStrings)
 	return max
 
 }
