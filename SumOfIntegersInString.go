@@ -11,7 +11,7 @@ import (
 
 func SumOfIntegersInString(strng string) int {
 	re := regexp.MustCompile("[0-9]+")
-	fmt.Println(re.FindAllString(strng, -1))
+	fmt.Println(re, re.FindAllString(strng, -1))
 
 	sum := 0
 	for _, i := range re.FindAllString(strng, -1) {
