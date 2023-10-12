@@ -8,10 +8,13 @@ import (
 
 func HighAndLow(in string) string {
 	slice := strings.Fields(in)
-	max := 0
-	min := 9
-	for _, char := range slice {
+	var max, min int
+	for i, char := range slice {
 		v, _ := strconv.Atoi(string(char))
+		if i == 0 {
+			max = v
+			min = v
+		}
 		if v > max {
 			max = v
 		}
