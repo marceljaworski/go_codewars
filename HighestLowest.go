@@ -19,11 +19,8 @@ func HighAndLow(in string) string {
 			min = v
 		}
 	}
-	result := []string{
-		strconv.Itoa(max),
-		strconv.Itoa(min),
-	}
-	return strings.Join(result, " ")
+
+	return fmt.Sprintf("%d %d", max, min)
 }
 func main() {
 	fmt.Println(HighAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
