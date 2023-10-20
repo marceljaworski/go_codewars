@@ -22,4 +22,5 @@ func RotationalCipher(plain string, shiftKey int) string {
 }
 func main() {
 	fmt.Println(RotationalCipher("abcdefghijklmnopqrstuvwxyz", 13))
+	fmt.Println(RotationalCipher("iamapandabear", 3))
 }
