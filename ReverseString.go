@@ -8,11 +8,9 @@ import (
 func ReverseLetters(s string) string {
 	re := regexp.MustCompile(`[^a-z]`)
 	replaced := re.ReplaceAllString(s, "")
-	count := len(replaced) - 1
 	solution := ""
-	for i := 0; i < len(replaced); i++ {
-		solution = solution + string(replaced[count])
-		count--
+	for i := len(replaced) - 1; i >= 0; i-- {
+		solution = solution + string(replaced[i])
 	}
 	return solution
 }

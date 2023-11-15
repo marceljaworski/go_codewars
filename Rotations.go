@@ -5,6 +5,7 @@ import "fmt"
 func ContainAllRots(strng string, arr []string) bool {
 	counter := 0
 	master := []string{}
+	//rotate string and append to master
 	for i, _ := range strng {
 		master = append(master, strng[i:]+strng[:i])
 	}
