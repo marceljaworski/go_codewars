@@ -11,7 +11,8 @@ func PrinterError(s string) string {
 		}
 	}
 	return fmt.Sprintf("%d/%d", errorCount, lenght)
-}
+}clear
+
 func main() {
 	fmt.Println(PrinterError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"))
 }
