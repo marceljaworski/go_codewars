@@ -13,7 +13,7 @@ type Person struct {
 
 func Phone(dir, num string) string {
 	slice := strings.Split(dir, "\n")
-	v := Person{}
+	var v Person
 	countIncidence := 0
 	for _, address := range slice {
 		if strings.Contains(address, num) {
