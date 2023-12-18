@@ -47,7 +47,7 @@ func Cipher(s string, shift int) []string {
 func DeCipher(arr []string, shift int) string {
 	var cipher bytes.Buffer
 	s := strings.Join(arr, "")
-	fmt.Println(s)
+	fmt.Println(s) 
 	for _, run := range s {
 		rot := run - rune(shift)
 		if unicode.IsLetter(run) {
